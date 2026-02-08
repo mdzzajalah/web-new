@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web buy</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Loading (4s) -->
+  <div id="loading">
+    <div class="spinner" aria-hidden="true"></div>
+    <div class="txt">Loading...</div>
+  </div>
+
+  <!-- Audio control top-right -->
+  <div class="audio-panel" role="region" aria-label="audio player">
+    <div class="music-sticker">♪</div>
+    <div class="play-ctrl">
+      <div style="font-weight:800;color:#cfefff">Putar Sound</div>
+      <div style="font-size:12px;color:#98c7df">Klik untuk play/stop</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px;margin-left:8px">
+      <button id="playTop" class="btn">Play</button>
+      <button id="stopTop" class="btn ghost">Stop</button>
+    </div>
+  </div>
+
+  <main class="container" id="main" style="display:none">
+    <header>
+      <div class="logo">Mdzz</div>
+      <div>
+        <h1>Mdzz no limit</h1>
+        <p class="lead">Selamat datang — silahkan pilih barang atau produk yang kamu mau</p>
+      </div>
+    </header>
+
+    <h2 class="store-title" id="storeTitle">Mdzz Room</h2>
+    <section class="card">
+      <h3>All produk by Mdzz no limiɪᴛ</h3>
+      <p class="small">Pilih kategori produk di bawah — klik untuk melihat list lengkap</p>
+      <div class="grid" style="margin-top:12px">
+        <div><button class="btn" data-target="hosting">HOSTING BOT LIST</button></div>
+        <div><button class="btn" data-target="nokos">LIST NOKOS</button></div>
+        <div><button class="btn" data-target="partner">PARTNER VVIP</button></div>
+        <div><button class="btn" data-target="murid">MURID BAND PRIVATE</button></div>
+        <div><button class="btn" data-target="allscripts">ALL SCRIPT LIST</button></div>
+        <div><button class="btn ghost" id="paymentBtn">Payment</button></div>
+      </div>
+    </section>
+
+    <section id="detailArea" class="card" style="display:none">
+      <div id="detailInner"></div>
+    </section>
+
+    <section class="card">
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <a class="link" target="_blank" href="https://t.me/mdzzaja"><button class="btn">Hubungi Owner</button></a>
+     </div>
+    </section>
+
+    <footer>® Created by Mdzz</footer>
+  </main>
+
+  <!-- Payment modal -->
+  <div id="modalBack" class="modal-back">
+    <div class="modal">
+      <h3>Pilihan Pembayaran</h3>
+      <p>Klik salah satu metode untuk melihat detail.</p>
+      <div>
+        <button class="btn pay-btn" data-pay="dana">DANA</button>
+        <button class="btn pay-btn" data-pay="gopay">GOPAY</button>
+        <button class="btn pay-btn" data-pay="qris">QRIS </button>
+      </div>
+      <div id="payDetail" style="margin-top:14px;color:#bfe9ff"></div>
+      <div style="text-align:right;margin-top:12px">
+        <button class="btn ghost" id="closeModal">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
